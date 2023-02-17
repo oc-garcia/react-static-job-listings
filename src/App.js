@@ -1,5 +1,13 @@
+import Filter from "./Components/Filter/Filter";
+import JobCard from "./Components/JobCard/JobCard";
+
 function App() {
-  return <div>job listing</div>;
+  return (
+    <>
+      <Filter />
+      <JobCard />
+    </>
+  );
 }
 
 export default App;
