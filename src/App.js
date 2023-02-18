@@ -1,5 +1,5 @@
-import Filter from "./Components/Filter/Filter";
-import JobCard from "./Components/JobCard/JobCard";
+import Filter from "./Components/Filter";
+import JobCard from "./Components/JobCard";
 
 function App() {
   return (

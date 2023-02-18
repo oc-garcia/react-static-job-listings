@@ -1,5 +1,30 @@
 @use 'src/base'
 
+%cotainer-shared
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+
 .cardContainer
     background-color: base.$Light-Grayish-Cyan
     height: 80vh
+    padding: 3rem
+    
+.card 
+    @extend %cotainer-shared
+    background-color: white
+    margin: 1rem
+    padding: 1rem
+
+.logo
+    width: 30%
+
+.jobSpecsContainer
+    width: 30%
+
+.jobInformationContainer 
+    @extend %cotainer-shared
+
+.jobDescriptonContainer
+    @extend %cotainer-shared

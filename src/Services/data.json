@@ -17,7 +17,7 @@
   {
     "id": 2,
     "company": "Manage",
-    "logo": "./images/manage.svg",
+    "logo": "../../Assets/images/manage.svg",
     "new": true,
     "featured": true,
     "position": "Fullstack Developer",
