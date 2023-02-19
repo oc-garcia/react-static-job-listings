@@ -23,6 +23,9 @@ export default function JobCard() {
             <p>{job.location}</p>
           </div>
         </div>
+        <div>
+          {job.languages.forEach((lang) => <div>{lang}</div>)}
+        </div>
       </div>
       )}
     </section>
