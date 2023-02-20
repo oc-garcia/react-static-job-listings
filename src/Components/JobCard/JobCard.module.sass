@@ -5,26 +5,97 @@
     align-items: center
     justify-content: space-between
 
-
 .cardContainer
     background-color: base.$Light-Grayish-Cyan
-    height: 80vh
+    height: 100%
+    width: 100%
     padding: 3rem
-    
-.card 
+
+.card
     @extend %cotainer-shared
     background-color: white
     margin: 1rem
     padding: 1rem
+    border-radius: 5px
+
+.cardSubContainer1
+    @extend %cotainer-shared
+    flex: 1
+
+.cardSubContainer2
+    @extend %cotainer-shared
+    flex-direction: row-reverse
+    flex: 1
+
+    ul
+        display: flex
+
+    li
+        list-style: none
+        margin-left: 1rem
+        cursor: pointer
+        padding: 0.5rem
+        color: base.$Desaturated-Dark-Cyan
+        background-color: base.$Light-Grayish-Cyan
+        border-radius: 5px
+
+    li:hover
+        color: base.$Light-Grayish-Cyan
+        background-color: base.$Desaturated-Dark-Cyan
 
 .logo
-    width: 30%
+    width: 5rem
+    height: 5rem
 
 .jobSpecsContainer
-    width: 30%
+    width: 60%
 
-.jobInformationContainer 
+.jobInformationContainer
     @extend %cotainer-shared
+    margin-bottom: 1rem
 
 .jobDescriptonContainer
     @extend %cotainer-shared
+
+.companyName
+    color: base.$Desaturated-Dark-Cyan
+    font-size: 1.2rem
+
+.new
+    color: base.$Light-Grayish-Cyan
+    background-color: base.$Desaturated-Dark-Cyan
+    padding: 0.3rem
+    border-radius: 5px
+    cursor: pointer
+
+.featured
+    color: base.$Light-Grayish-Cyan
+    background-color: base.$Very-Dark-Grayish-Cyan
+    padding: 0.3rem
+    border-radius: 5px
+    cursor: pointer
+
+.jobPosition
+    font-weight: 700
+    font-size: 1.3rem
+    color: base.$Very-Dark-Grayish-Cyan
+    margin-bottom: 1rem
+
+.jobPosition:hover
+     color: base.$Desaturated-Dark-Cyan
+     cursor: pointer
+
+.postedAt
+    color: base.$Dark-Grayish-Cyan
+
+.contract
+    color: base.$Dark-Grayish-Cyan
+
+.location
+    color: base.$Dark-Grayish-Cyan
+
+.dot
+    height: 0.2rem
+    width: 0.2rem
+    background-color: base.$Dark-Grayish-Cyan
+    border-radius: 50%
