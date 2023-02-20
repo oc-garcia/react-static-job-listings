@@ -23,9 +23,10 @@ export default function JobCard() {
             <p>{job.location}</p>
           </div>
         </div>
-        <div>
-          {job.languages.map((lang) => <div>{lang}</div>)}
-        </div>
+        <ul>
+          {job.languages.map((lang) => <li>{lang}</li>)}
+          {job.tools.map((tool) => <li>{tool}</li>)}
+        </ul>
       </div>
       )}
     </section>
