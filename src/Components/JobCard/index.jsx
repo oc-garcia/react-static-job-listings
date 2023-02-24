@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './JobCard.module.sass'
 import jobs from '../../Services/data.json'
 
 export default function JobCard() {
+   const [selectedFilter, setSelectedFilter] = useState(null)
+
+   const handleFilterClick = (filter) => {
+    setSelectedFilter(filter)
+   }
+
+   const filteredJobs = selectedFilter
+    ? jobs.filter(
+        (job) => job.languages.includes(selectedFilter) || job.tools.includes(selectedFilter)
+      )
+    : jobs
   return (
     <section className={styles.cardContainer}>
-      {jobs.map(job => 
-      <div className={styles.card}>
+      {filteredJobs.map(job => 
+      <div className={styles.card} key={job.id}>
         <div className={styles.cardSubContainer1}>
           <img className={styles.logo} src={`${job.logo}`} alt='Company Logo'/>
           <div className={styles.jobSpecsContainer}>
@@ -29,8 +40,8 @@ export default function JobCard() {
         </div>
         <div className={styles.cardSubContainer2}>
           <ul>
-            {job.languages.map((lang) => <li>{lang}</li>)}
-            {job.tools.map((tool) => <li>{tool}</li>)}
+            {job.languages.map((language) => <li onClick={() => handleFilterClick(language)} key={language}>{language}</li>)}
+            {job.tools.map((tool) => <li onClick={() => handleFilterClick(tool)} key={tool}>{tool}</li>)}
           </ul>
         </div>
       </div>
