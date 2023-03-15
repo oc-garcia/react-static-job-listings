@@ -7,12 +7,15 @@ import { FilterContext } from "../../Hooks/Context/FilterContext";
 export default function JobCard() {
   const { selectedFilters, addFilter } = useContext(FilterContext);
 
-  console.log(selectedFilters.lenght);
+  console.log(selectedFilters.toString());
+  console.log(selectedFilters.map((selectedFilter) => selectedFilter));
 
   const filteredJobs =
-    selectedFilters.lenght === undefined
+    selectedFilters.length === 0
       ? jobs
-      : jobs.filter((job) => job.languages.includes(selectedFilters) || job.tools.includes(selectedFilters));
+      : jobs.filter((job) =>
+          selectedFilters.every((filter) => job.languages.includes(filter) || job.tools.includes(filter))
+        );
   return (
     <section className={styles.cardContainer}>
       {filteredJobs.map((job) => (

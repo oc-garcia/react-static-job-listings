@@ -19,9 +19,3 @@ export const FilterProvider = ({ children }) => {
     <FilterContext.Provider value={{ selectedFilters, addFilter, removeFilter }}>{children}</FilterContext.Provider>
   );
 };
-
-//  const filteredJobs = selectedFilter
-//   ? jobs.filter(
-//       (job) => job.languages.includes(selectedFilter) || job.tools.includes(selectedFilter)
-//     )
-//   : jobs
