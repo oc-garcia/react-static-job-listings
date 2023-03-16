@@ -6,6 +6,7 @@ import { FilterContext } from "../../Hooks/Context/FilterContext";
 
 export default function Filter() {
   const { selectedFilters, removeFilter, setSelectedFilters } = useContext(FilterContext);
+
   return (
     <section className={styles.FilterContainer}>
       {selectedFilters.length > 0 && (

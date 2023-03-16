@@ -6,7 +6,7 @@ $bg-img-mobile: url(./bg-header-mobile.svg)
     height: 100%
     width: 100%
     padding: 0rem 15%
-    height: 15vh
+    min-height: 15vh
     background-image: $bg-img-desktop
     background-size: cover
     background-color: base.$Desaturated-Dark-Cyan
@@ -17,9 +17,10 @@ $bg-img-mobile: url(./bg-header-mobile.svg)
     display: flex
     align-items: flex-start
     flex-wrap: wrap
+    gap:0.5rem
     background-color: white
     margin: 1rem
-    padding: 1rem
+    padding: 1rem 0 1rem 2rem
     border-radius: 5px
     width: 100%
     position: relative
@@ -57,3 +58,12 @@ $bg-img-mobile: url(./bg-header-mobile.svg)
         position: absolute
         left: 90%
         top:40%
+
+@media only screen and (max-width: 900px) 
+        .FilterContainer
+            padding: 0 5%
+
+            button
+                left: 80%
+
+

@@ -14,8 +14,15 @@ export default function JobCard() {
     selectedFilters.length === 0
       ? jobs
       : jobs.filter((job) =>
-          selectedFilters.every((filter) => job.languages.includes(filter) || job.tools.includes(filter))
+          selectedFilters.every(
+            (filter) =>
+              job.languages.includes(filter) ||
+              job.tools.includes(filter) ||
+              job.role.includes(filter) ||
+              job.level.includes(filter)
+          )
         );
+
   return (
     <section className={styles.cardContainer}>
       {filteredJobs.map((job) => (
@@ -52,6 +59,12 @@ export default function JobCard() {
                   {tool}
                 </li>
               ))}
+              <li onClick={() => addFilter(job.role)} key={job.role}>
+                {job.role}
+              </li>
+              <li onClick={() => addFilter(job.level)} key={job.level}>
+                {job.level}
+              </li>
             </ul>
           </div>
         </div>

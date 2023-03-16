@@ -26,9 +26,13 @@
     @extend %cotainer-shared
     flex-direction: row-reverse
     flex: 1
+    flex-wrap: wrap
 
     ul
         display: flex
+        flex-wrap: wrap
+        padding: 1rem
+        gap:0.5rem
 
     li
         list-style: none
@@ -44,7 +48,6 @@
         background-color: base.$Desaturated-Dark-Cyan
 
     li:hover:after
-        
 
 .logo
     width: 5rem
@@ -104,3 +107,34 @@
     width: 0.2rem
     background-color: base.$Dark-Grayish-Cyan
     border-radius: 50%
+
+@media only screen and (max-width: 900px)
+    .cardContainer
+        padding: 3rem 5%
+
+    .card:first-child
+        margin-top: 1rem
+
+    .card
+        flex-direction: column
+        position: relative
+        margin-top: 5rem
+        padding-top: 3rem
+
+    .logo
+        position: absolute
+        top: -20%
+        left: 5%
+    
+    .cardSubContainer1
+        width: 100%
+        padding-bottom: 1rem
+        border-bottom: 1px solid base.$Dark-Grayish-Cyan
+
+    .cardSubContainer2
+        width: 100%
+        margin-top: 1rem
+        flex-direction: row
+    
+    .jobSpecsContainer
+        width: 100%
