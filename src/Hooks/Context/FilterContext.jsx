@@ -16,6 +16,8 @@ export const FilterProvider = ({ children }) => {
   };
 
   return (
-    <FilterContext.Provider value={{ selectedFilters, addFilter, removeFilter }}>{children}</FilterContext.Provider>
+    <FilterContext.Provider value={{ selectedFilters, addFilter, removeFilter, setSelectedFilters }}>
+      {children}
+    </FilterContext.Provider>
   );
 };
