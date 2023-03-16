@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-static-job-listings/static/css/main.17be92fc.css",
+    "main.css": "/react-static-job-listings/static/css/main.42b13581.css",
     "main.js": "/react-static-job-listings/static/js/main.344a1190.js",
     "static/media/bg-header-desktop.svg": "/react-static-job-listings/static/media/bg-header-desktop.752d0faf14c00c6fb55f.svg",
     "index.html": "/react-static-job-listings/index.html",
-    "main.17be92fc.css.map": "/react-static-job-listings/static/css/main.17be92fc.css.map",
+    "main.42b13581.css.map": "/react-static-job-listings/static/css/main.42b13581.css.map",
     "main.344a1190.js.map": "/react-static-job-listings/static/js/main.344a1190.js.map"
   },
   "entrypoints": [
-    "static/css/main.17be92fc.css",
+    "static/css/main.42b13581.css",
     "static/js/main.344a1190.js"
   ]
 }
