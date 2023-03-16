@@ -1,10 +1,46 @@
 @use 'src/base'
 $bg-img-desktop: url(./bg-header-desktop.svg)
 $bg-img-mobile: url(./bg-header-mobile.svg)
-    
+
 .FilterContainer
+    height: 100%
     width: 100%
+    padding: 3rem 15%
     height: 20vh
     background-image: $bg-img-desktop
     background-size: cover
     background-color: base.$Desaturated-Dark-Cyan
+
+.Filter
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+    background-color: white
+    margin: 1rem
+    padding: 1rem
+    border-radius: 5px
+    transition: 0.5s
+
+    ul
+        display: flex
+
+    li
+        list-style: none
+        padding: 0.5rem 0 0.5rem 0.5rem
+        color: base.$Desaturated-Dark-Cyan
+        background-color: base.$Light-Grayish-Cyan
+        border-radius: 5px
+        cursor: pointer
+        margin-right: 1rem
+
+    li::after
+        margin-left: 0.5rem 
+        content: 'X'
+        padding: 7px 
+        border-radius: 0 5px 5px 0 
+        color: base.$Light-Grayish-Cyan
+        background-color: base.$Desaturated-Dark-Cyan
+
+    li:hover:after
+        color: base.$Light-Grayish-Cyan
+        background-color: base.$Very-Dark-Grayish-Cyan
